@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+}
+
+:root {
+    --nav-color: rgb(195, 162, 237);
+    --theme-color: #EDE4FF;
+    --theme-color-two: rgb(248, 199, 99);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--theme-color);
+    min-height: 100vh;
+}
+
+header{
+    padding-right: 2vw;
+    padding-left: 2vw;
+    display: flex;
+    column-gap: 1vw;
+    background-color: var(--nav-color);
+    margin-bottom: 10px;
+}
+
+nav {
+    flex-grow: 2;
+    align-self: center;
+    font-weight: bold;
+}
+
+nav > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-end;
+    column-gap: 5vw;
+}
+
+main {
+    flex-grow: 2;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, var(--theme-color), var(--nav-color), var(--theme-color));
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    background-color: var(--theme-color-two);
+}
+
+a {
+    color: var(--theme-color-two);
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+    font-size: 45px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* Details and Summary style */
+details {
+    border: 1px solid var(--nav-color);
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    list-style-type: none;
+    font-weight: 600;
+    margin-top:-0.5em;
+    margin-right:-0.5em;
+    margin-left: -0.5em;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid var(--nav-color);
+    margin-bottom: 0.5em;
+}
+
+/* Table styles */
+table {
+    table-layout: auto;
+    width: 90%;
+    border-collapse: collapse;
+    box-shadow: 0 0 25px var(--nav-color);
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+th,td {
+    padding: 15px;
+    background-color: var(--theme-color);
+}
+
+th {
+    text-align: center;
+    background-color: var(--nav-color);
+}
+
+/* CSS Animation */
+.fade-in-effect { animation: fade-in 1s; }
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design for nav bar*/
+@supports (display: flex) {
+    @media screen and (max-width: 500px) {
+        header, nav > ul{
+            align-items: center;
+            flex-direction: column;
+            padding-bottom:5px;
+        }
+    }
+}

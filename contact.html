@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh Phan's website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/image/thanh_logo.png">
+    <link rel="stylesheet" href="thanh-hw3.css">
+    <style>
+        fieldset {
+            border-style: solid;
+            border-color: var(--nav-color);
+            border-width: medium;
+            display: grid;
+            row-gap: 5px;
+            justify-items: center;
+            margin-left: 90px;
+            margin-right: 10vw;
+            border-radius: 20px; 
+        }
+
+        label[for="quick-message"] {
+            display:flex;
+            flex-direction: column; 
+        }
+
+        #quick-message{
+            width: 450px;
+            height: 150px;
+            resize: none;
+        }
+
+        #contact-info{
+            display:flex;
+            flex-direction: column;
+        }
+
+        #contact-info ul,p {
+            margin-left: 100px;
+            margin-bottom: 5px;
+        }
+
+        textarea, input[type="text"] {
+            border-style: solid;
+            padding: 1px 10px;
+            border-radius: 10px; 
+        }
+
+        @supports (display: flex) {
+            @media screen and (max-width: 650px) {
+                #quick-message{
+                    width: 30vw;
+                    height: 20vw;
+                    resize: none;
+                }
+            }
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <img src="/image/thanh_logo.png" alt="thanh logo" width="80" height="80">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Thanh</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="fade-in-effect">
+        <div id="contact-info">
+            <pre>
+                H  E  L  L  O , 
+            </pre>
+    
+            <p>I would like to talk more and can be reached via:
+                <ul>
+                    <li>Email: <a href="mailto:pthanhngan13@gmail.com">pthanhngan13@gmail.com</a></li>
+                    <li>Phone: <a href="tel:4245425030">(424)-542-5030</a></li>
+                    <li>Linkedin: <a href="https://www.linkedin.com/in/thanh-ngan-phan-81a819250/">Thanh Ngan Phan</a></li>
+                </ul>   
+            </p>
+        </div>    
+
+        <form action="mailto:pthanhngan13@gmail.com" method="POST">
+            <fieldset>
+                <legend>Quick message?</legend>
+                <label for="prefix">I should call you as:
+                    <select id="prefix" unselected>
+                        <option style="display:none"></option>
+                        <optgroup label="General">
+                            <option>Mr.</option>
+                            <option>Mrs.</option>
+                            <option>Ms.</option>
+                            <option>Miss</option>
+                        </optgroup>
+                        <optgroup label="Other">
+                            <option>Dr.</option>
+                            <option>Mx.</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label for="first-name">First Name
+                    <input type="text" name="first-name" id="first-name"> 
+                </label>
+                <label for="last-name">Last Name
+                    <input type="text" name="last-name" id="last-name"> 
+                </label>
+                <label for="contact-method">Your Contact:
+                    <input type="text" name="contact-method-content" id="contact-method-content"> 
+                </label>
+                <label for="quick-message">Your Message:
+                    <textarea id="quick-message" name="quick-message"></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+
+        <div id="experiment-one">
+            <template>
+                <p>Thank you for looking at my website</p> 
+            </template>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <p>Summer 2023 by Thanh Phan.</p>
+    </footer>
+</body>
+</html>

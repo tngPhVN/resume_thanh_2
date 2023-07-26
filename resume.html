@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh Phan's website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/image/thanh_logo.png">
+    <link rel="stylesheet" href="thanh-hw3.css">
+    <style>
+        .experience{
+            order: 2; 
+        }
+
+        .education{
+            order: 3; 
+        }
+
+        #resume-pdf{
+            order: 1; 
+        }
+
+        ul{
+            margin-left: 1vw;
+        }
+
+        #school-list {
+            list-style-type: none;
+            border-style: solid;
+            border-color: var(--nav-color);
+            border-width: medium;
+            text-align: center;
+            margin-left: 30vw;
+            margin-right: 30vw;
+            background-color: var(--theme-color);
+            box-shadow: 0 0 15px var(--nav-color);
+        }
+
+        .school-item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+
+        .school-item li:first-child{
+            font-weight:600;
+        }
+
+        h1,h2,h3 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .small-screen {
+            display:none;
+        }
+
+        @supports (display: flex) {
+            @media screen and (max-width: 650px) {
+                .large-screen{
+                    display: none;
+                }
+
+                .small-screen {
+                    display:block;
+                    border-style: solid;
+                    border-color: var(--nav-color);
+                    border-width: medium;
+                    background-color: var(--theme-color);
+                    box-shadow: 0 0 15px var(--nav-color);
+                }
+
+                .small-screen,.large-screen li,ul {
+                    list-style-type: none;
+                    margin-left: 10px;
+                    margin-top: 5px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <img src="/image/thanh_logo.png" alt="thanh logo" width="80" height="80">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Thanh</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="fade-in-effect">
+        <section class="experience">
+            <h2>Experience</h2>
+            <table class="large-screen">
+                <!-- <caption>Jobs</caption> -->
+                <colgroup>
+                    <col class="title">
+                    <col span="2" class="company">
+                    <col span="2" class="job-info">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>English Teaching Assistant</td>
+                        <td>YOLA English Center</td>
+                        <td>Vietnam</td>
+                        <td>
+                            <ul>
+                                <li>Completed daily reports on attendance and disciplinary performance</li>
+                                <li>Assisted in maintaining an engaging and respectful educational environment by promoting discipline and cooperation</li>
+                                <li>Tutored struggling students individually and in small groups to reinforce learning concepts</li>
+                                <li>Providing feedback to reinforce positive behaviors and improve understanding of difficult concepts</li>
+                            </ul>    
+                        </td>    
+                        <td>6 months
+                            <details>
+                            <summary>Details</summary>
+                            March-August, 2021
+                            </details>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul class="small-screen">
+                <li><h3>English Teaching Assistant</h3>
+                <h4>YOLA English Center, Vietnam - 6 months</h4>
+                </li>
+                <li>
+                    <ul>
+                        <li>Completed daily reports on attendance and disciplinary performance</li>
+                        <li>Assisted in maintaining an engaging and respectful educational environment by promoting discipline and cooperation</li>
+                        <li>Tutored struggling students individually and in small groups to reinforce learning concepts</li>
+                        <li>Providing feedback to reinforce positive behaviors and improve understanding of difficult concepts</li>
+                    </ul>   
+                </li> 
+            </ul>
+
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <ul id="school-list">
+                <li>
+                    <ul class="school-item">
+                        <li>2021-2023</li>
+                        <li>University of California, San Diego</li>
+                        <li>Bachelor of Science, Computer Science</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="school-item">
+                        <li>2019-2021</li>
+                        <li>Santa Monica College</li>
+                        <li>Non-Degree Seeking</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Relevant Courses</h3>
+            <table class="large-screen">
+                <thead>
+                    <tr>
+                        <th>Courses</th>
+                        <th>Skills Gained</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Introduction to Computer Architecture</td>
+                        <td>Acquired comprehensive understanding of the various components that form a computer system and the functionalities of the CPU, memory units, and their interconnections to facilitate computer performance</td>
+                    </tr>
+                    <tr>
+                        <td>Programing Language: Principal Paradigm</td>
+                        <td>Learned and practiced the functional programming language in complement with applied to implement common tasks and data structures</td>
+                    </tr>
+                    <tr>
+                        <td>Design & Analysis of Algorithm</td>
+                        <td>Built a significant understanding with the emphasis on algorithms including sorting, searching, pattern matching, and graph algorithms</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Data Structure</td>
+                        <td>Analyzed the efficiency of a data structure in addition to appropriate searching/sorting algorithms depending the usage of an application</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul class="small-screen">
+                <li><h4>Introduction to Computer Architecture</h4>
+                    <p>Acquired comprehensive understanding of the various components that form a computer system and the functionalities of the CPU, memory units, and their interconnections to facilitate computer performance</p>
+                </li>    
+                
+                <li><h4>Programing Language: Principal Paradigm</h4>
+                    <p>Learned and practiced the functional programming language in complement with applied to implement common tasks and data structures</p>
+                </li>
+
+                <li><h4>Design & Analysis of Algorithm</h4>
+                    <p>Built a significant understanding with the emphasis on algorithms including sorting, searching, pattern matching, and graph algorithms</p>
+                </li> 
+
+                <li><h4>Advanced Data Structure</h4>
+                    <p>Analyzed the efficiency of a data structure in addition to appropriate searching/sorting algorithms depending the usage of an application</p>
+                </li>
+            </ul>
+        </section>
+        <nav id="resume-pdf">
+            <a href="/document/resume_july23.pdf" target="_blank">Resume PDF</a>
+        </nav>
+    </main>
+    <footer>
+        <hr>
+        <p>Summer 2023 by Thanh Phan.</p>
+    </footer>
+</body>
+</html>

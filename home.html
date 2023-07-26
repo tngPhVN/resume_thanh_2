@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh Phan's website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/image/thanh_logo.png">
+    <link rel="stylesheet" href="thanh-hw3.css">
+    <style>
+        h1 {
+            grid-area: header1;
+            align-self: end;
+        }
+
+        main p {
+            grid-area: paragraph;
+        }
+
+        picture {
+            grid-area: picture;
+            align-self: center;
+            justify-self: center;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "picture header1"
+            "picture paragraph";
+            row-gap: 0;
+        }
+
+        @supports (display: flex) {
+            @media screen and (max-width: 500px) {
+                main {
+                    grid-template-areas: 
+                    "picture picture"
+                    "header1 header1"
+                    "paragraph paragraph";
+                    place-items: center;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/image/thanh_logo.png" alt="thanh logo" width="80" height="80">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Thanh</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Thanh Phan</h1>
+        <p> a Computer Science student</p>
+        <picture class="fade-in-effect">
+            <source srcset="/image/profile.jpeg" type="image/jpeg" width="300" height="300" media="(min-width:650px)">
+            <img src="/image/profile_pic.png" alt="Thanh profile picture" width="200" height="200">
+        </picture>
+    </main>
+    <footer>
+        <hr>
+        <p>Summer 2023 by Thanh Phan.</p>
+    </footer>
+</body>
+</html>
