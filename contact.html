@@ -19,7 +19,7 @@
             border-radius: 20px; 
         }
 
-        label[for="quick-message"] {
+        label[for="quick-message"], #contact-info{
             display:flex;
             flex-direction: column; 
         }
@@ -30,17 +30,12 @@
             resize: none;
         }
 
-        #contact-info{
-            display:flex;
-            flex-direction: column;
-        }
-
         #contact-info ul,p {
             margin-left: 100px;
             margin-bottom: 5px;
         }
 
-        textarea, input[type="text"] {
+        textarea, input {
             border-style: solid;
             padding: 1px 10px;
             border-radius: 10px; 
@@ -84,37 +79,22 @@
             </ul>   
         </div>    
 
-        <form action="mailto:pthanhngan13@gmail.com" method="POST">
+        <form id="contact-form">
             <fieldset>
                 <legend>Quick message?</legend>
-                <label for="prefix">I should call you as:
-                    <select id="prefix">
-                        <option>None</option>
-                        <optgroup label="General">
-                            <option>Mr.</option>
-                            <option>Mrs.</option>
-                            <option>Ms.</option>
-                            <option>Miss</option>
-                        </optgroup>
-                        <optgroup label="Other">
-                            <option>Dr.</option>
-                            <option>Mx.</option>
-                        </optgroup>
-                    </select>
-                </label>
-                <label for="first-name">First Name
+                <label for="first-name">First Name:
                     <input type="text" name="first-name" id="first-name"> 
                 </label>
-                <label for="last-name">Last Name
+                <label for="last-name">Last Name:
                     <input type="text" name="last-name" id="last-name"> 
                 </label>
-                <label for="contact-method">Your Contact:
-                    <input type="text" name="contact-method" id="contact-method"> 
+                <label for="contact-method">Your Email:
+                    <input type="email" name="contact-method" id="contact-method"> 
                 </label>
                 <label for="quick-message">Your Message:
                     <textarea id="quick-message" name="quick-message"></textarea>
                 </label>
-                <button type="submit">Send</button>
+                <input type="submit" id="sendBtn" value="Send">
             </fieldset>
         </form>
 

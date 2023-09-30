@@ -7,9 +7,13 @@
     <link rel="icon" type="image/png" href="/image/thanh_logo.png">
     <link rel="stylesheet" href="thanh-hw3.css">
     <style>
-        h1 {
-            grid-area: header1;
-            align-self: end;
+        #person-info {
+            grid-area: info;
+            align-self: center;
+        }
+
+        #person-info:hover {
+            transform: scale(1.5);
         }
 
         main p {
@@ -27,8 +31,8 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
             grid-template-areas: 
-            "picture header1"
-            "picture paragraph";
+            "picture info"
+            "picture info";
             row-gap: 0;
         }
 
@@ -59,8 +63,10 @@
         </nav>
     </header>
     <main>
-        <h1>Thanh Phan</h1>
-        <p> a Computer Science student</p>
+        <section id="person-info">
+            <h1>Thanh Phan</h1>
+            <p> a Computer Science student</p>
+        </section>
         <picture class="fade-in-effect">
             <source srcset="/image/profile.jpeg" type="image/jpeg" width="300" height="300" media="(min-width:650px)">
             <img src="/image/profile_pic.png" alt="Thanh profile picture" width="200" height="200">

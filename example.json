@@ -1,0 +1,10 @@
+{
+    "user":[
+        {
+            "first-name": "John",
+            "last-name": "Doe",
+            "contact-method": "abc@gmail.com",
+            "quick-message": "hello" 
+        }
+    ]
+}

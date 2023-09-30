@@ -70,7 +70,7 @@ h3 {
     margin-top: 5px;
 }
 
-button {
+input[type='submit'] {
     border-radius: 5px;
     padding: 5px 15px;
     margin-bottom: 5px;
