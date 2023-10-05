@@ -83,14 +83,14 @@ a {
 
 h1 {
     font-family: "Space Mono", monospace;
-    font-size: 45px;
+    font-size: 2.5em;
     margin-top: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.5em;
 }
 
 /* Details and Summary style */

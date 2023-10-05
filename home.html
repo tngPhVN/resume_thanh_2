@@ -12,10 +12,6 @@
             align-self: center;
         }
 
-        #person-info:hover {
-            transform: scale(1.5);
-        }
-
         main p {
             grid-area: paragraph;
         }
@@ -26,6 +22,16 @@
             justify-self: center;
         }
 
+        img[alt='Thanh profile picture']{
+            border: 1px solid #ddd;
+            border-radius: 25%;
+            padding: 5px;
+        }
+
+        img[alt='Thanh profile picture']:hover {
+            box-shadow: 0 0 2px 1px rgb(248, 199, 99);
+        }
+
         main {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -34,16 +40,18 @@
             "picture info"
             "picture info";
             row-gap: 0;
+            padding-right: 2em;
         }
 
         @supports (display: flex) {
             @media screen and (max-width: 500px) {
                 main {
                     grid-template-areas: 
-                    "picture picture"
-                    "header1 header1"
-                    "paragraph paragraph";
+                    "picture"
+                    "info";
                     place-items: center;
+                    padding-left: 5em;
+                    padding-right: 5em;
                 }
             }
         }
@@ -65,7 +73,21 @@
     <main>
         <section id="person-info">
             <h1>Thanh Phan</h1>
-            <p> a Computer Science student</p>
+            <p id="typing"></p>
+            <script>
+                var i = 0;
+                var txt = 'a Computer Science student.';
+                var speed = 50;
+
+                function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("typing").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                    }
+                }
+                window.addEventListener('DOMContentLoaded', typeWriter);
+            </script>
         </section>
         <picture class="fade-in-effect">
             <source srcset="/image/profile.jpeg" type="image/jpeg" width="300" height="300" media="(min-width:650px)">
