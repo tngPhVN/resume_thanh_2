@@ -43,10 +43,11 @@ main {
     flex-grow: 2;
     margin-left: 1vw;
     margin-right: 1vw;
+    padding-right: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 15px;
+    font-size: medium;
 }
 
 footer {
@@ -68,6 +69,7 @@ hr {
 
 h3 {
     margin-top: 5px;
+    font-size: 1rem;
 }
 
 input[type='button'] {
@@ -82,15 +84,16 @@ a {
 }
 
 h1 {
-    font-family: "Space Mono", monospace;
-    font-size: 2.5em;
+    font-family: "Kalam";
+    font-size: 2.5rem;
     margin-top: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-family: "Neuton";
+    font-size: 1.5rem;
 }
 
 /* Details and Summary style */
@@ -154,5 +157,21 @@ th {
             flex-direction: column;
             padding-bottom:5px;
         }
+
+        main, footer {
+            font-size: smaller;
+        }
     }
+}
+
+/* Imported font family */
+@font-face {
+    font-family: "Kalam";
+    src: url("assets/font/Kalam-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Neuton";
+    src: url("assets/font/Neuton-Light.ttf") format("truetype");
 }
