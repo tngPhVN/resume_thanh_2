@@ -1,4 +1,4 @@
-# resume_thanh_2
+# Thanh Phan Website
 
 [Website link](https://thanh-phan.netlify.app)
 
