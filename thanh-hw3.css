@@ -9,7 +9,7 @@
 :root {
     --nav-color: rgb(195, 162, 237);
     --theme-color: #EDE4FF;
-    --theme-color-two: rgb(248, 199, 99);
+    --theme-color-two : rgb(232, 195, 150);
 }
 
 body {
@@ -20,6 +20,9 @@ body {
 }
 
 header{
+    border-style: double;
+    border-width: 3px;
+    border-color: var(--theme-color);
     padding-right: 2vw;
     padding-left: 2vw;
     display: flex;

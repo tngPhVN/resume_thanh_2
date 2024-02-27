@@ -16,7 +16,18 @@
         main > ul {
             list-style-type: none;
             display: flex;
-            column-gap: 10vw;
+            column-gap: 5vw;
+        }
+
+        @supports (display: flex) {
+            @media screen and (max-width: 500px) {
+                main > ul {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1vh;
+                }
+            }
         }
     </style>
 </head>
@@ -38,9 +49,9 @@
             Growing up in Vietnam encourages me to explore more to be able to expand my view and understanding. 
             I am excited to have chances to learn new knowledge and test my limits.</p>
         <ul>
-            <li>Location: San Diego, CA</li>
             <li>Email: <a href="mailto:thanhphn0120@gmail.com">thanhphn0120@gmail.com</a></li>
             <li>Linkedin: <a href="https://www.linkedin.com/in/thanh-ngan-phan/">Thanh Ngan Phan</a></li>
+            <li>Github: <a href="https://github.com/tngPhVN">tngPhVN</a></li>
         </ul>
     </main>
     <footer>
